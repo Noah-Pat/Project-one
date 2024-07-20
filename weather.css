@@ -1,0 +1,82 @@
+body {
+  background-color: #0a1f44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 100vh;
+  margin: 0;
+  padding: 70px;
+  text-align: center; 
+}
+
+.api,
+.top-banner{
+  color: white;
+}
+.ajax-section,
+.page-footer {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5em;
+  font-size: calc(1.5em + 1vw);
+}
+
+input, button {
+  font-size: calc(1em + 0.5vw);
+  height: 40px;
+  padding: 5px 5px 10px;
+  background-color: #0a1f44;
+  color: white;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+input[type="text"]::placeholder {
+  color: white; 
+}
+
+button {
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  font-size: calc(1em + 0.5vw);
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 700px) {
+  form {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  input {
+    margin-right: 10px;
+    margin-bottom: 0; 
+  }
+  
+  button {
+    margin-top: 0; 
+  }
+}
