@@ -15,14 +15,14 @@ body {
 
 .heading {
   font-family: 'Roboto', sans-serif;
-  font-size: calc(1.5em + 1vw); /* Scales with viewport width */
+  font-size: calc(1.5em + 1vw); 
   text-align: center;
   margin: 20px 0;
 }
 
 @media (min-width: 1200px) {
   .heading {
-    font-size: 3em; /* Max font size for large screens */
+    font-size: 3em; 
   }
 }
 
@@ -45,11 +45,10 @@ body {
   background-color: #3a3a3a;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  width: 100%;        /* Fit to the full screen width */
-  max-width: 1000px;   /* Limit the width on larger screens */
-  padding: 20px;       /* Padding for spacing inside the container */
-  position: relative;  /* Ensures the menu is positioned relative to the city box */
-  box-sizing: border-box; /* Include padding in the width calculation */
+  width: 100%;        
+  padding: 20px;       
+  position: relative;  
+  box-sizing: border-box; 
 }
 
 /* City and country styling */
@@ -90,17 +89,17 @@ input, button {
 }
 
 input[type="text"] {
-  border: 2px solid white;   /* Permanent white outline */
-  outline: none;             /* Remove the default focus outline */
-  color: white;              /* Text color inside input */
-  background-color: #0a1f44; /* Match the input background color */
+  border: 2px solid white;   
+  outline: none;             
+  color: white;              
+  background-color: #0a1f44; 
   padding: 10px;
   border-radius: 5px;
   font-size: calc(1em + 0.5vw);
 }
 
 input[type="text"]::placeholder {
-  color: #cfcfcf; /* Placeholder color */
+  color: #cfcfcf; 
 }
 
 button {
