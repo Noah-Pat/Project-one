@@ -17,6 +17,7 @@ form.addEventListener("submit", e => {
 
       const li = document.createElement("li");
       li.classList.add("city");
+
       const markup = `
         <h2 class="city-name" data-name="${location.name},${location.country}">
           <span>${location.name}</span>
@@ -39,12 +40,32 @@ form.addEventListener("submit", e => {
           <p>Precipitation: ${current.precip_in} in</p>
           <p>Humidity: ${current.humidity}%</p>
           <p>Cloud Cover: ${current.cloud}%</p>
-          <p>Feels Like: ${Math.round(current.feelslike_f)}<sup>°C</sup></p>
+          <p>Feels Like: ${Math.round(current.feelslike_f)}<sup>°F</sup></p>
           <p>UV Index: ${current.uv}</p>
+        </div>
+
+        <!-- Three-dot menu -->
+        <div class="menu-container">
+          <button class="menu-button">⋮</button>
+          <div class="menu-options">
+            <button class="delete-city">Delete</button>
+          </div>
         </div>
       `;
       li.innerHTML = markup;
       list.appendChild(li);
+
+      // Event listener for delete button
+      li.querySelector(".delete-city").addEventListener("click", () => {
+        list.removeChild(li);
+      });
+
+      // Toggle menu options
+      const menuButton = li.querySelector(".menu-button");
+      const menuOptions = li.querySelector(".menu-options");
+      menuButton.addEventListener("click", () => {
+        menuOptions.classList.toggle("show");
+      });
     })
     .catch(() => {
       msg.textContent = "Please search for a valid city";
